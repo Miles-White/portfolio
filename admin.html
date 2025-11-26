@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Administration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin" style="background:#eef2f6;">
+
+    <nav class="navbar">
+        <div class="logo">ADMIN<span>PANEL</span></div>
+        <div class="nav-links"><a href="index.html">Retour au site</a></div>
+    </nav>
+
+    <div id="login-box" class="login-box">
+        <h2 style="text-align:center">Connexion Sécurisée</h2>
+        <input type="text" id="user" placeholder="Utilisateur">
+        <input type="password" id="pass" placeholder="Mot de passe">
+        <button onclick="login()">Se connecter</button>
+    </div>
+
+    <div id="admin-panel" class="admin-panel" style="display:none; max-width: 800px;">
+        <h2>Ajouter un projet</h2>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <input type="text" id="p-title" placeholder="Titre du projet">
+            <select id="p-cat">
+                <option value="perso">Personnel</option>
+                <option value="univ">Universitaire</option>
+                <option value="pro">Professionnel</option>
+            </select>
+        </div>
+        <input type="text" id="p-img" placeholder="Chemin image (ex: images/monprojet.jpg)">
+        <textarea id="p-desc" rows="5" placeholder="Description complète..."></textarea>
+        <button onclick="addProject()">Publier le projet</button>
+
+        <h3 style="margin-top:40px;">Gérer les projets existants</h3>
+        <div id="admin-list" style="margin-top:20px;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

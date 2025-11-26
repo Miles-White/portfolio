@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | Ingénieur Drone & Microélec</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-page="home">
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-microchip"></i><span>TECH</span>FOLIO
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="perso.html">Perso</a>
+            <a href="univ.html">Univ</a>
+            <a href="pro.html">Pro</a>
+            <a href="admin.html" class="btn-admin">Connexion</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Ingénierie <span class="text-highlight">Drones</span> & <span class="text-highlight">Systèmes Embarqués</span>.</h1>
+            <p>Passionné par la microélectronique et l'innovation. Mon objectif : développer des solutions robotiques pour la reforestation et l'environnement.</p>
+            <a href="perso.html" style="background:var(--primary); color:white; padding:15px 30px; border-radius:50px; font-weight:700;">Voir mes projets</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-drone.jpg" onerror="this.src='https://via.placeholder.com/600x400?text=Passion+Tech'" alt="Drone">
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="section-header">
+            <h2>À Propos & Passions</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                <i class="fas fa-drone fa-3x" style="color:var(--primary); margin-bottom:20px;"></i>
+                <h3>Drones Autonomes</h3>
+                <p>Conception, stabilisation PID et vol en essaim. Je cherche à repousser les limites de l'autonomie.</p>
+            </div>
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                <i class="fas fa-microchip fa-3x" style="color:var(--primary); margin-bottom:20px;"></i>
+                <h3>Microélectronique</h3>
+                <p>Du PCB au firmware bas niveau (C/C++). J'aime optimiser le lien entre le code et le matériel.</p>
+            </div>
+            <div style="background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                <i class="fas fa-leaf fa-3x" style="color:var(--primary); margin-bottom:20px;"></i>
+                <h3>Tech for Good</h3>
+                <p>Utiliser la technologie pour des causes justes, comme la reforestation de zones sinistrées.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header">
+            <h2>Dernières Réalisations</h2>
+        </div>
+        <div id="projects-container" class="grid"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
